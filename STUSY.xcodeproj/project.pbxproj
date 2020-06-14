@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771F0908249192D9004A5C7D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F0907249192D9004A5C7D /* SignUpViewController.swift */; };
+		771F090A2491A9A8004A5C7D /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F09092491A9A8004A5C7D /* ScheduleViewController.swift */; };
+		771F090C2492D79E004A5C7D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771F090B2492D79E004A5C7D /* Login.storyboard */; };
+		771F090E249511FD004A5C7D /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F090D249511FD004A5C7D /* DayTableViewCell.swift */; };
+		771F09102496C286004A5C7D /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F090F2496C286004A5C7D /* ScheduleTableViewCell.swift */; };
 		77BF04312491194D00B1E477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF04302491194D00B1E477 /* AppDelegate.swift */; };
 		77BF04332491194D00B1E477 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF04322491194D00B1E477 /* SceneDelegate.swift */; };
-		77BF04352491194D00B1E477 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF04342491194D00B1E477 /* ViewController.swift */; };
+		77BF04352491194D00B1E477 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF04342491194D00B1E477 /* LoginViewController.swift */; };
 		77BF04382491194D00B1E477 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77BF04362491194D00B1E477 /* Main.storyboard */; };
 		77BF043A2491194E00B1E477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77BF04392491194E00B1E477 /* Assets.xcassets */; };
 		77BF043D2491194E00B1E477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77BF043B2491194E00B1E477 /* LaunchScreen.storyboard */; };
+		77BF044624916EB200B1E477 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF044524916EB200B1E477 /* UIView.swift */; };
+		77BF044824916F6900B1E477 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF044724916F6900B1E477 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		771F0907249192D9004A5C7D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		771F09092491A9A8004A5C7D /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		771F090B2492D79E004A5C7D /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		771F090D249511FD004A5C7D /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
+		771F090F2496C286004A5C7D /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		77BF042D2491194D00B1E477 /* STUSY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STUSY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BF04302491194D00B1E477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77BF04322491194D00B1E477 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		77BF04342491194D00B1E477 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		77BF04342491194D00B1E477 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		77BF04372491194D00B1E477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77BF04392491194E00B1E477 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77BF043C2491194E00B1E477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77BF043E2491194E00B1E477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77BF044524916EB200B1E477 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		77BF044724916F6900B1E477 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		771F09112496C29B004A5C7D /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				771F09092491A9A8004A5C7D /* ScheduleViewController.swift */,
+				771F090F2496C286004A5C7D /* ScheduleTableViewCell.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
 		77BF04242491194D00B1E477 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +79,29 @@
 		77BF042F2491194D00B1E477 /* STUSY */ = {
 			isa = PBXGroup;
 			children = (
+				77BF044424916EA500B1E477 /* Extensions */,
 				77BF04302491194D00B1E477 /* AppDelegate.swift */,
 				77BF04322491194D00B1E477 /* SceneDelegate.swift */,
-				77BF04342491194D00B1E477 /* ViewController.swift */,
+				771F09112496C29B004A5C7D /* Schedule */,
+				771F0907249192D9004A5C7D /* SignUpViewController.swift */,
+				77BF04342491194D00B1E477 /* LoginViewController.swift */,
+				771F090D249511FD004A5C7D /* DayTableViewCell.swift */,
 				77BF04362491194D00B1E477 /* Main.storyboard */,
+				771F090B2492D79E004A5C7D /* Login.storyboard */,
 				77BF04392491194E00B1E477 /* Assets.xcassets */,
 				77BF043B2491194E00B1E477 /* LaunchScreen.storyboard */,
 				77BF043E2491194E00B1E477 /* Info.plist */,
 			);
 			path = STUSY;
+			sourceTree = "<group>";
+		};
+		77BF044424916EA500B1E477 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				77BF044524916EB200B1E477 /* UIView.swift */,
+				77BF044724916F6900B1E477 /* UIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				771F090C2492D79E004A5C7D /* Login.storyboard in Resources */,
 				77BF043D2491194E00B1E477 /* LaunchScreen.storyboard in Resources */,
 				77BF043A2491194E00B1E477 /* Assets.xcassets in Resources */,
 				77BF04382491194D00B1E477 /* Main.storyboard in Resources */,
@@ -138,9 +176,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77BF04352491194D00B1E477 /* ViewController.swift in Sources */,
+				771F0908249192D9004A5C7D /* SignUpViewController.swift in Sources */,
+				77BF044624916EB200B1E477 /* UIView.swift in Sources */,
+				771F090E249511FD004A5C7D /* DayTableViewCell.swift in Sources */,
+				77BF04352491194D00B1E477 /* LoginViewController.swift in Sources */,
 				77BF04312491194D00B1E477 /* AppDelegate.swift in Sources */,
 				77BF04332491194D00B1E477 /* SceneDelegate.swift in Sources */,
+				771F090A2491A9A8004A5C7D /* ScheduleViewController.swift in Sources */,
+				77BF044824916F6900B1E477 /* UIColor.swift in Sources */,
+				771F09102496C286004A5C7D /* ScheduleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
