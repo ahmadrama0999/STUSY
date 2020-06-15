@@ -10,6 +10,11 @@ import UIKit
 
 class DayTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var footerView: UIView! {
+        didSet {
+            footerView.isHidden = true
+        }
+    }
     
 
     override func awakeFromNib() {
