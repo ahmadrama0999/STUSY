@@ -25,13 +25,15 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = loginButton.frame.height / 2
         loginButton.layer.masksToBounds = true
         
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     @IBAction func signUpAction(_ sender: Any) {
-        guard let signUp = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "SignUpNavigationController") as? UINavigationController else { return }
-        
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
-        sceneDelegate.window?.rootViewController = signUp.self
+//        guard let signUp = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "SignUpNavigationController") as? UINavigationController else { return }
+//
+//        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
+//        sceneDelegate.window?.rootViewController = signUp.self
 //        present(signUp, animated: true, completion: nil)
     }
     

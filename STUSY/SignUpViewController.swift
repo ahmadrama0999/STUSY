@@ -11,13 +11,16 @@ import UIKit
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var passwordStackView: UIStackView!
+    @IBOutlet weak var passwordTextField: UITextField!
+    var stepCount: Int = 1
     
-    var stepCount = 1
+    @IBOutlet var steps: [UIImageView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func viewDidLayoutSubviews() {
@@ -30,15 +33,35 @@ class SignUpViewController: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateUI() {
+        fill(step: stepCount)
     }
-    */
-
+    
+    func fill(step: Int) {
+        steps.forEach { (image) in
+            image.image = #imageLiteral(resourceName: "ellipseEmpty")
+        }
+        steps[stepCount - 1].image = #imageLiteral(resourceName: "ellipseFill")
+        
+        switch stepCount {
+        case 1:
+            break
+        case 2:
+            UIView.transition(with: passwordTextField, duration: 0.4, options: [.transitionCrossDissolve], animations: {
+                self.passwordStackView.isHidden = true
+            })
+        case 3:
+            break
+        default: break
+        }
+    }
+    
+    @IBAction func signUp(_ sender: Any) {
+        guard stepCount < 3 else { return }
+        stepCount += 1
+        updateUI()
+    }
+    
+    
 }
+
