@@ -8,6 +8,17 @@
 
 import UIKit
 
+enum WeekDays: String, CaseIterable {
+    case monday = "Monday"
+    case tuesday = "Tuesday"
+    case wednesday = "Wednesday"
+    case thursday = "Thursday"
+    case friday = "Friday"
+    case saturday = "Saturday"
+
+    static let weekdays = WeekDays.allCases
+}
+
 class AddScheduleViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -17,14 +28,15 @@ class AddScheduleViewController: UIViewController {
     @IBOutlet var steps: [UIImageView]!
     
     var stepCount = 1
-    let weekdays = ["Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    let weekdays = WeekDays.weekdays
+    var selectedDays = Set<WeekDays>()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.dataSource = self
         tableView.delegate = self
+        weekdays.forEach({ selectedDays.insert($0) })
     }
     
     func updateUI() {
@@ -51,11 +63,13 @@ class AddScheduleViewController: UIViewController {
     
     
     @IBAction func nextStepAction(_ sender: Any) {
+        let selectedDays = Array(self.selectedDays)
+        // дальше делаешь что тебе нужно.
         if stepCount < 2{
             stepCount += 1
             updateUI()
         } else {
-            performSegue(withIdentifier: "AddScheduleTable", sender: nil) 
+            performSegue(withIdentifier: "AddScheduleTable", sender: nil)
         }
     }
 }
@@ -68,8 +82,16 @@ extension AddScheduleViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseCell") as? ChooseDayCellTableViewCell else { fatalError()}
-        cell.dayLabel.text = weekdays[indexPath.row]
         cell.choiceSwitch.isOn = true
+        let day = weekdays[indexPath.row]
+        cell.setup(day: day.rawValue) { [weak self] isOn in
+            guard let self = self else { return }
+            if isOn {
+                self.selectedDays.insert(day)
+            } else {
+                self.selectedDays.remove(day)
+            }
+        }
         return cell
     }
     

@@ -20,36 +20,36 @@ struct Group {
 }
 
 struct Weekday {
-    let weekday: Weekday
+    let weekday: WeekDays
     let arrayLessons: [Lesson]
 //    let arrayEvenLessons: [Lesson]
     
-    enum Weekday {
-        case monday
-        case tuesday
-        case wednesday
-        case thursday
-        case friday
-        case saturday
-        
-        var name: String {
-            switch self {
-            case .monday:
-                return "monday"
-            case .tuesday:
-                return "tuesday"
-            case .wednesday:
-                return "wednesday"
-            case .thursday:
-                return "thursday"
-            case .friday:
-                return "friday"
-            case .saturday:
-                return "saturday"
-            }
-            
-        }
-    }
+//    enum Weekday {
+//        case monday
+//        case tuesday
+//        case wednesday
+//        case thursday
+//        case friday
+//        case saturday
+//
+//        var name: String {
+//            switch self {
+//            case .monday:
+//                return "monday"
+//            case .tuesday:
+//                return "tuesday"
+//            case .wednesday:
+//                return "wednesday"
+//            case .thursday:
+//                return "thursday"
+//            case .friday:
+//                return "friday"
+//            case .saturday:
+//                return "saturday"
+//            }
+//
+//        }
+//    }
 }
 
 struct Lesson {

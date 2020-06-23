@@ -49,7 +49,7 @@ extension AddDayViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "DayCell", for: indexPath) as? DayTableViewCell else { return UITableViewCell() }
-            cell.dayLabel.text = colapsableArray[indexPath.section].value.weekday.name
+            cell.dayLabel.text = colapsableArray[indexPath.section].value.weekday.rawValue
             return cell
         }
 

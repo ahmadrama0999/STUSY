@@ -68,7 +68,7 @@ extension DayViewController: UITableViewDataSource {
         
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "DayCell", for: indexPath) as? DayTableViewCell else { return UITableViewCell() }
-            cell.dayLabel.text = colapsableArray[indexPath.section].value.weekday.name
+            cell.dayLabel.text = colapsableArray[indexPath.section].value.weekday.rawValue
             return cell
         } else {
             guard let cell2 = tableView.dequeueReusableCell(withIdentifier: "LessonCell", for: indexPath) as? LessonTableViewCell else { return UITableViewCell() }

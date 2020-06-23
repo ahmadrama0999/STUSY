@@ -15,6 +15,11 @@ class DayTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        // TODO
+//        layer.backgroundColor = .none
+//        layer.cornerRadius = frame.height / 6
+//        layer.shadowOpacity = 0.5
+//        layer.shadowColor = .some(CGColor(srgbRed: 0.89, green: 1, blue: 0.8, alpha: 1))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,7 +33,6 @@ class DayTableViewCell: UITableViewCell {
         layer.cornerRadius = frame.height / 6
         layer.shadowOpacity = 0.5
         layer.shadowColor = .some(CGColor(srgbRed: 0.89, green: 1, blue: 0.8, alpha: 1))
-        
     }
 }
 

@@ -699,7 +699,6 @@
                                 </state>
                                 <connections>
                                     <action selector="nextStepAction:" destination="zSM-eg-v9d" eventType="touchUpInside" id="dAj-RJ-cEE"/>
-                                    <segue destination="n2w-32-wXo" kind="show" identifier="AddScheduleTable" id="EeW-vw-Djo"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which day  do you study?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4o-Di-4Ly">
@@ -739,6 +738,7 @@
                         <outlet property="tableView" destination="kjv-u1-qkd" id="XTR-XH-9NU"/>
                         <outletCollection property="steps" destination="1gM-AJ-BgB" collectionClass="NSMutableArray" id="fD6-VI-pr5"/>
                         <outletCollection property="steps" destination="3iu-QI-1l5" collectionClass="NSMutableArray" id="i4z-4O-7pn"/>
+                        <segue destination="n2w-32-wXo" kind="show" identifier="AddScheduleTable" id="oMH-NE-eUy"/>
                     </connections>
                 </viewController>
             </objects>

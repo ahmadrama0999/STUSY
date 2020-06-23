@@ -8,20 +8,21 @@
 
 import UIKit
 
+
 class ChooseDayCellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var choiceSwitch: UISwitch!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private var switchCallback: ((Bool) -> Void)?
+    
+    
+    func setup(day: String, switchCallback: ((Bool) -> Void)?) {
+        dayLabel.text = day
+        self.switchCallback = switchCallback
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction private func switchChanged(_ sender: UISwitch) {
+        switchCallback?(sender.isOn)
     }
-
 }
