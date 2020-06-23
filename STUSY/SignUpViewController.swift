@@ -10,11 +10,14 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+    @IBOutlet var firstStepStackView: [UIStackView]!
+    @IBOutlet var secondStepStackView: [UIStackView]!
+    @IBOutlet var thirdStepStackView: [UIStackView]!
+    
+    @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var passwordStackView: UIStackView!
     @IBOutlet weak var passwordTextField: UITextField!
     var stepCount: Int = 1
-    
     @IBOutlet var steps: [UIImageView]!
     
     override func viewDidLoad() {
@@ -34,33 +37,58 @@ class SignUpViewController: UIViewController {
     }
     
     func updateUI() {
-        fill(step: stepCount)
+        hidingUI(step: stepCount)
     }
     
-    func fill(step: Int) {
+    func hidingUI(step: Int) {
         steps.forEach { (image) in
             image.image = #imageLiteral(resourceName: "ellipseEmpty")
         }
         steps[stepCount - 1].image = #imageLiteral(resourceName: "ellipseFill")
         
         switch stepCount {
-        case 1:
-            break
+        case 1: break
         case 2:
-            UIView.transition(with: passwordTextField, duration: 0.4, options: [.transitionCrossDissolve], animations: {
-                self.passwordStackView.isHidden = true
-            })
+            //            UIView.transition(with: passwordTextField, duration: 0.4, options: [.transitionCrossDissolve], animations: {
+            ////                self.firstStepStackView.isHidden = true
+            //            })
+            firstStepStackView.forEach { (view) in
+                view.isHidden = true
+            }
+            secondStepStackView.forEach { (view) in
+                view.isHidden = false
+            }
+            noteLabel.isHidden = false
+            navigationController?.navigationBar.topItem?.title = "2 Step"
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(finishSighUp))
+            navigationController?.reloadInputViews()
         case 3:
-            break
+            secondStepStackView.forEach { (view) in
+                view.isHidden = true
+            }
+            thirdStepStackView.forEach { (view) in
+                view.isHidden = false
+            }
+            navigationController?.navigationBar.topItem?.title = "3 Step"
         default: break
         }
     }
     
-    @IBAction func signUp(_ sender: Any) {
-        guard stepCount < 3 else { return }
-        stepCount += 1
-        updateUI()
+    @objc func finishSighUp() {
+        //TODO: Отправка данных на сервер или в локальную базу данных
+        navigationController?.popToRootViewController(animated: true)
     }
+    
+    @IBAction func signUp(_ sender: Any) {
+        if stepCount < 3{
+            stepCount += 1
+            updateUI()
+        } else {
+            finishSighUp()
+        }
+    }
+    
+    
     
     
 }

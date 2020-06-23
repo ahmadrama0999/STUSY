@@ -16,7 +16,7 @@ struct Schedule {
 class ScheduleViewController: UIViewController {
     
     let array: [Schedule] = [Schedule(uni: "ICS",groupName: "AI 172")]
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -24,17 +24,25 @@ class ScheduleViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        guard let navBar = navigationController?.navigationBar else { return }
+        navBar.barStyle = .default
     }
     
     @IBAction func addNewScheduleAction(_ sender: UIBarButtonItem) {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "DaySegue" else { return }
-        guard let destination = segue.destination as? DayViewController else { return }
+        if segue.identifier == "DaySegue" {
+            guard let destination = segue.destination as? DayViewController else { return }
+        } else if segue.identifier == "addSchedule" {
+            guard let destination = segue.destination as? AddScheduleViewController else { return }
+        }
     }
-
 }
 
 extension ScheduleViewController: UITableViewDataSource {
@@ -49,12 +57,16 @@ extension ScheduleViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let navBar = navigationController?.navigationBar else { return }
+        navBar.barStyle = .black
+        navBar.setBackgroundImage(UIImage(), for: .default)
+        performSegue(withIdentifier: "DaySegue", sender: nil)
         
     }
-
+    
     
 }
 
 extension ScheduleViewController: UITableViewDelegate {
-        
+    
 }

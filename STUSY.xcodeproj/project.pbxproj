@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7702F87224A23A4D003FEBB5 /* AddScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702F87124A23A4D003FEBB5 /* AddScheduleViewController.swift */; };
+		7702F87424A23DC3003FEBB5 /* ChooseDayCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702F87324A23DC3003FEBB5 /* ChooseDayCellTableViewCell.swift */; };
+		7702F87824A24448003FEBB5 /* AddDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702F87724A24448003FEBB5 /* AddDayViewController.swift */; };
 		771F0908249192D9004A5C7D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F0907249192D9004A5C7D /* SignUpViewController.swift */; };
 		771F090A2491A9A8004A5C7D /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F09092491A9A8004A5C7D /* ScheduleViewController.swift */; };
 		771F090C2492D79E004A5C7D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771F090B2492D79E004A5C7D /* Login.storyboard */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7702F87124A23A4D003FEBB5 /* AddScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleViewController.swift; sourceTree = "<group>"; };
+		7702F87324A23DC3003FEBB5 /* ChooseDayCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDayCellTableViewCell.swift; sourceTree = "<group>"; };
+		7702F87724A24448003FEBB5 /* AddDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayViewController.swift; sourceTree = "<group>"; };
 		771F0907249192D9004A5C7D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		771F09092491A9A8004A5C7D /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		771F090B2492D79E004A5C7D /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -61,13 +67,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		771F09112496C29B004A5C7D /* Schedule */ = {
+		7702F87024A238DE003FEBB5 /* AddSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				7702F87124A23A4D003FEBB5 /* AddScheduleViewController.swift */,
+				7702F87324A23DC3003FEBB5 /* ChooseDayCellTableViewCell.swift */,
+				7702F87724A24448003FEBB5 /* AddDayViewController.swift */,
+			);
+			path = AddSchedule;
+			sourceTree = "<group>";
+		};
+		771F09112496C29B004A5C7D /* ListSchedule */ = {
 			isa = PBXGroup;
 			children = (
 				771F09092491A9A8004A5C7D /* ScheduleViewController.swift */,
 				771F090F2496C286004A5C7D /* ScheduleTableViewCell.swift */,
 			);
-			path = Schedule;
+			path = ListSchedule;
 			sourceTree = "<group>";
 		};
 		774B28F82498FDF0000635A5 /* Model */ = {
@@ -78,7 +94,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		779B39592497CEAF00DE479F /* ScheduleTable */ = {
+		779B39592497CEAF00DE479F /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
 				779B395E2497D4CF00DE479F /* DayViewController.swift */,
@@ -87,7 +103,7 @@
 				774B28F32498FD74000635A5 /* LessonTableViewCell.swift */,
 				774B28F42498FD74000635A5 /* LessonTableViewCell.xib */,
 			);
-			path = ScheduleTable;
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 		77BF04242491194D00B1E477 = {
@@ -113,10 +129,11 @@
 				77BF04302491194D00B1E477 /* AppDelegate.swift */,
 				77BF04322491194D00B1E477 /* SceneDelegate.swift */,
 				77BF04342491194D00B1E477 /* LoginViewController.swift */,
-				774B28F82498FDF0000635A5 /* Model */,
 				771F0907249192D9004A5C7D /* SignUpViewController.swift */,
-				771F09112496C29B004A5C7D /* Schedule */,
-				779B39592497CEAF00DE479F /* ScheduleTable */,
+				7702F87024A238DE003FEBB5 /* AddSchedule */,
+				774B28F82498FDF0000635A5 /* Model */,
+				771F09112496C29B004A5C7D /* ListSchedule */,
+				779B39592497CEAF00DE479F /* Schedule */,
 				77BF04362491194D00B1E477 /* Main.storyboard */,
 				771F090B2492D79E004A5C7D /* Login.storyboard */,
 				77BF04392491194E00B1E477 /* Assets.xcassets */,
@@ -211,6 +228,7 @@
 			files = (
 				774B28FA2498FE05000635A5 /* ScheduleModel.swift in Sources */,
 				771F0908249192D9004A5C7D /* SignUpViewController.swift in Sources */,
+				7702F87424A23DC3003FEBB5 /* ChooseDayCellTableViewCell.swift in Sources */,
 				779B395F2497D4CF00DE479F /* DayViewController.swift in Sources */,
 				77BF044624916EB200B1E477 /* UIView.swift in Sources */,
 				771F090E249511FD004A5C7D /* DayTableViewCell.swift in Sources */,
@@ -220,7 +238,9 @@
 				774B28F52498FD74000635A5 /* LessonTableViewCell.swift in Sources */,
 				771F090A2491A9A8004A5C7D /* ScheduleViewController.swift in Sources */,
 				77BF044824916F6900B1E477 /* UIColor.swift in Sources */,
+				7702F87224A23A4D003FEBB5 /* AddScheduleViewController.swift in Sources */,
 				771F09102496C286004A5C7D /* ScheduleTableViewCell.swift in Sources */,
+				7702F87824A24448003FEBB5 /* AddDayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

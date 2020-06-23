@@ -16,11 +16,13 @@ struct University {
 struct Group {
     let name: String
     let weekdays: [Weekday]
+//    let weekdaysEven: [Weekday]
 }
 
 struct Weekday {
     let weekday: Weekday
     let arrayLessons: [Lesson]
+//    let arrayEvenLessons: [Lesson]
     
     enum Weekday {
         case monday
@@ -28,6 +30,7 @@ struct Weekday {
         case wednesday
         case thursday
         case friday
+        case saturday
         
         var name: String {
             switch self {
@@ -41,7 +44,10 @@ struct Weekday {
                 return "thursday"
             case .friday:
                 return "friday"
+            case .saturday:
+                return "saturday"
             }
+            
         }
     }
 }
@@ -50,4 +56,6 @@ struct Lesson {
     let name: String
     let lector: String
     let classRoom: String
+//    let timeFrom: String
+//    let timeTo: String
 }

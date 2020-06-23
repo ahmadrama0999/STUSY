@@ -13,8 +13,8 @@ class LessonTableViewCell: UITableViewCell {
     
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var prepodLabel: UILabel!
-    @IBOutlet weak var audLabel: UILabel!
+    @IBOutlet weak var lectorLabel: UILabel!
+    @IBOutlet weak var classRoomLabel: UILabel!
     @IBOutlet weak var timeFromLabel: UILabel!
     @IBOutlet weak var timeToLabel: UILabel!
     

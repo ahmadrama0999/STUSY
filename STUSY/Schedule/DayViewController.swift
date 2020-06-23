@@ -8,26 +8,27 @@
 
 import UIKit
 
+
+struct ColapsableCell<T> {
+    var isOpened = false
+    let value: T
+}
+
 class DayViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var chooseSegmentedControl: UISegmentedControl!
     var colapsableArray = [ColapsableCell<Weekday>]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        navigationController?.navigationBar.shadowImage = UIImage()
-//        navigationController?.navigationBar.isTranslucent = false
-        guard let navBar = navigationController?.navigationBar else { return }
-        navBar.barStyle = .black
-        navBar.setBackgroundImage(UIImage(), for: .default)
-        navBar.shadowImage = UIImage()
-        navBar.isTranslucent = true
-        navBar.isHidden = false
-        
+//         guard let navBar = navigationController?.navigationBar else { return }
+//                navBar.barStyle = .black
+//                navBar.setBackgroundImage(UIImage(), for: .default)
+        //        navBar.shadowImage = UIImage()
+        //        navBar.isTranslucent = true
+        //        navBar.isHidden = false
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -38,6 +39,7 @@ class DayViewController: UIViewController {
         colapsableArray.append(ColapsableCell(isOpened: false, value: Weekday(weekday: .thursday, arrayLessons: [Lesson(name: "123", lector: "Bolt", classRoom: "172")])))
         colapsableArray.append(ColapsableCell(isOpened: false, value: Weekday(weekday: .friday, arrayLessons: [Lesson(name: "123", lector: "Bolt", classRoom: "172"), Lesson(name: "Phil", lector: "Marina", classRoom: "130"), Lesson(name: "Phil", lector: "Marina", classRoom: "130")])))
     }
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -72,9 +74,9 @@ extension DayViewController: UITableViewDataSource {
             guard let cell2 = tableView.dequeueReusableCell(withIdentifier: "LessonCell", for: indexPath) as? LessonTableViewCell else { return UITableViewCell() }
             
             let item = colapsableArray[indexPath.section].value.arrayLessons[indexPath.row - 1]
-            cell2.audLabel.text = item.classRoom
+            cell2.classRoomLabel.text = item.classRoom
             cell2.nameLabel.text = item.name
-            cell2.prepodLabel.text = item.lector
+            cell2.lectorLabel.text = item.lector
             return cell2
         }
     }
@@ -92,10 +94,4 @@ extension DayViewController: UITableViewDataSource {
 
 extension DayViewController: UITableViewDelegate {
     
-}
-
-
-struct ColapsableCell<T> {
-    var isOpened = false
-    let value: T
 }
